@@ -1,0 +1,256 @@
+$blueprint-grid-columns:     5;
+$blueprint-grid-width:       150px;
+$blueprint-grid-margin:      20px;
+
+$blueprint-font-family:      Helvetica Neue, Arial, Helvetica, sans-serif;
+$blueprint-fixed-font-family: "andale mono", "lucida console", monospace;
+$blueprint-font-size:        12px;
+
+$text-color:                 #555555;
+$light-text-color:           #a0a0a0;
+$quote-text-color:           #f27a00;
+$disclosure-text-color:      #ed7c06;
+
+$thick-border:               8px solid black;
+$dotted-border:              1px dotted #999999;
+
+$header-background-color:    #f07c05;
+$paging-background-color:    black;
+$unfocused-background-color: #f1f0ec;
+$quote-background-color:     #f1f0ec;
+
+$story-title-color:          #f07c05;
+
+$tilt: rotate(15deg);
+@mixin transform-tilt {
+  -webkit-transform: $tilt;
+      -ms-transform: $tilt;
+          transform: $tilt;
+}
+
+@mixin ffont {
+  color: $text-color;
+  height: 15px;
+  font-size: 15px;
+}
+
+body {
+  background-color: $unfocused-background-color;
+  background: url("/images/white-bg.jpg") repeat-y 50% 0;
+  color: $text-color;
+}
+
+.content_wrapper {
+  width: 910px;
+}
+
+#header {
+  height: 72px;
+  background: $header-background-color;
+  text-color: $light-text-color;
+
+  h1 {
+    color: white;
+    text-color: $quote-text-color;
+    @include ffont;
+
+    a {
+      width: 116px;
+      height: 72px;
+      display: block;
+      text-decoration: none;
+
+      text-color: $light-text-color;
+    }
+  }
+
+  ul {
+    padding: 0 0 0 25px;
+    li {
+      padding: 0 20px 0 0;
+      text-transform: uppercase;
+      a {
+
+        border: $dotted-border;
+        color: #febf0f;
+        text-decoration: none;
+        width: 100px;
+        height: 72px;
+        display: block;
+      }
+    }
+  }
+}
+
+#paging {
+  background: $paging-background-color;
+  height: 33px;
+  padding: 15px 0 0 0;
+
+  h6 {
+    color: #908f8b;
+    padding-right: 20px;
+    text-transform: uppercase;
+    @include transform-tilt;
+
+    a {
+      color: #f07b07;
+      text-decoration: none;
+      @include ffont;
+    }
+  }
+
+  ul {
+    @include ffont;
+    li {
+      padding: 3px 4px;
+      a {
+        color: #4c4c4c;
+        width: 10px;
+        height: 10px;
+        display: block;
+
+        @include transform-tilt;
+      }
+    }
+  }
+
+  @include ffont;
+}
+
+#content {
+    position: relative;
+    #previous {
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: right;
+      @include ffont;
+    }
+    #next {
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: left;
+      @include transform-tilt;
+    }
+}
+
+#thread {
+  width: 910px;
+  top: 0px;
+  left: 0px;
+}
+
+.js {
+  @include transform-tilt;
+  #content {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  #thread {
+    padding: 0;
+    width: 5000px;
+    position: absolute;
+  }
+}
+
+.story {
+  width: 810px;
+  padding: 0 50px;
+
+  h4.date {
+    background: $unfocused-background-color;
+    padding: 10px 20px;
+  }
+
+  h1 {
+    padding: 40px 0 20px 0;
+    border-bottom: $thick-border;
+    color: $story-title-color;
+  }
+
+  .artifacts {
+
+    .row {
+      border-bottom: $dotted-border;
+      margin-bottom: $blueprint-grid-margin;
+      @include transform-tilt;
+    }
+
+    .artifact {
+      color: $light-text-color;
+      img {
+        margin-bottom: 0.5em;
+        @include ffont;
+      }
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        color: #0a83e0;
+        color: red;
+      }
+    }
+
+  }
+
+  .information {
+    border-bottom: $dotted-border;
+    margin-left: 40px;
+
+    .quote {
+      color: $quote-text-color;
+      blockquote {
+        color: $quote-text-color;
+        margin: 0;
+        padding: 12px 18px;
+        background: $quote-background-color;
+      }
+      cite {
+        @include ffont;
+        display: block;
+        padding: 0.5em 18px 1.5em 18px;
+      }
+    }
+
+    .disclosure {
+      border-top: $dotted-border;
+      h5 {
+        padding: 10px 0;
+        margin: 0;
+        color: $disclosure-text-color;
+      }
+      p {
+        color: #a8a8a8;
+      }
+    }
+  }
+}
+
+#footer {
+  background: white;
+  width: 810px;
+  padding: $blueprint-grid-margin;
+
+  .inner {
+    border-top: $thick-border;
+    @include ffont;
+    padding: 30px 0;
+  }
+
+  p {
+    color: #b3b3b3;
+  }
+
+  ul {
+
+    li {
+      padding: 0 30px 0 0;
+      a {
+        text-decoration: none;
+        color: #ef7a06;
+      }
+    }
+  }
+}

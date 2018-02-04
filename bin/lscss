@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require './lscss/lscss'
+
+LSCSS::CLI.new(ARGV).perform
