@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+rubocop --format html -o rubocop.html & open rubocop.html

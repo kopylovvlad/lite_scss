@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+rubycritic parser/ transformer/ compiler/ lscss/
