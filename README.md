@@ -94,10 +94,12 @@ $tilt: rotate(15deg);
 
 # Example of usage
 
+You can see some example files in source/ folder.
+After running command you can see compiled css files in css/ folder
 ```shell
-./bin/lscss compile sourse/example1.lscss css/example1.css
-./bin/lscss compile sourse/example2.lscss css/example2
-./bin/lscss compile sourse/example3.lscss css/example3
+./bin/lscss compile source/example1.lscss css/example1.css
+./bin/lscss compile source/example2.lscss css/example2
+./bin/lscss compile source/example3.lscss css/example3
 ```
 
 ## helpers
