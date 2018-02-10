@@ -99,3 +99,14 @@ $tilt: rotate(15deg);
 ./bin/lscss compile sourse/example2.lscss css/example2
 ./bin/lscss compile sourse/example3.lscss css/example3
 ```
+
+## helpers
+rubocop
+```shell
+./bin/rubocop
+```
+
+rubycritic
+```shell
+./bin/rubycritic
+```
